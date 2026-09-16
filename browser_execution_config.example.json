@@ -1,0 +1,21 @@
+{
+  "calibrated": false,
+  "read_calibrated": false,
+  "url": "https://localads.chengzijianzhan.cn/lamp/pc/cdp_promotion/promote-manage/project?advid=<ACCOUNT_ID>",
+  "selectors": {
+    "account_id": null,
+    "plan_row": null,
+    "plan_id": null,
+    "plan_name": null,
+    "budget": null,
+    "status": null,
+    "budget_edit": null,
+    "budget_dialog": null,
+    "budget_input": null,
+    "budget_save": null,
+    "pause_button": null,
+    "pause_dialog": null,
+    "pause_confirm": null
+  },
+  "status_values": {}
+}

@@ -1,0 +1,22 @@
+{
+  "url": "https://shimo.im/sheets/<SHEET_ID>/MODOC",
+  "title": "抖音本地推数据",
+  "sheet_name": "工作表1",
+  "header_row": 2,
+  "first_daily_row": 6,
+  "selectors": {
+    "name_box": "input.sm-quick-jump-input",
+    "formula_bar": "#sm-sheet-fx-editor",
+    "active_sheet": ".sm-sheet-tab-item.active-tab"
+  },
+  "columns": {
+    "date": "A", "spend": "B", "leads": "C", "lead_cost": "D",
+    "valid_leads": "E", "valid_lead_cost": "F", "impressions": "G",
+    "clicks": "H", "ctr": "I", "cpc": "J", "private_messages": "K",
+    "lead_conversion_rate": "L", "contacted_leads": "M", "contact_cost": "N"
+  },
+  "platform_write_columns": {"B": "spend", "C": "leads", "G": "impressions", "H": "clicks", "K": "private_messages"},
+  "preserve_columns": ["D", "E", "F", "I", "J", "L", "M", "N"],
+  "agent_feedback_columns": ["P", "Q"],
+  "human_feedback_columns": ["R", "S", "T", "U", "V", "W"]
+}
