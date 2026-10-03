@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>模型设置 · 投放诊断</title>
+  <link rel="stylesheet" href="/dashboard.css">
+</head>
+<body class="settings-body">
+  <aside id="sidebar">
+    <header class="brand">
+      <h1>投放诊断</h1>
+      <p class="sub">本地诊断工作台</p>
+    </header>
+    <nav class="workspace-nav" aria-label="工作台">
+      <a href="/">日报记录</a>
+      <a href="/settings" aria-current="page">模型设置</a>
+    </nav>
+    <p class="sidebar-note">配置保存在这台电脑上。日报分析使用这里保存的模型和 Key。</p>
+  </aside>
+  <main id="main" class="settings-main">
+    <header class="settings-header">
+      <p class="eyebrow">工作台设置</p>
+      <h2>连接你的模型</h2>
+      <p>填入模型服务商提供的 API Key，保存后即可用于投放诊断。</p>
+    </header>
+    <section class="settings-panel" aria-labelledby="config-title">
+      <div class="panel-heading">
+        <h3 id="config-title">模型配置</h3>
+        <span id="config-status" class="config-status">正在读取…</span>
+      </div>
+      <form id="model-form" aria-busy="true">
+        <fieldset id="model-fields" disabled>
+          <div class="field">
+            <label for="provider">服务商</label>
+            <select id="provider" name="provider">
+              <option value="deepseek">DeepSeek</option>
+              <option value="openai">OpenAI</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="model">模型名</label>
+            <input id="model" name="model" type="text" maxlength="160" required autocomplete="off"
+                   placeholder="填写服务商提供的模型名" aria-describedby="model-help">
+            <p id="model-help" class="field-help">与服务商平台上的模型名称保持一致。</p>
+          </div>
+          <div class="field">
+            <label for="api-key">API Key</label>
+            <input id="api-key" name="api_key" type="password" maxlength="1024" autocomplete="new-password"
+                   placeholder="粘贴 API Key" aria-describedby="key-help" spellcheck="false">
+            <p id="key-help" class="field-help">Key 仅保存到本机，不会显示在日报中。</p>
+          </div>
+          <p id="environment-note" class="field-help" hidden>运行进程设置了模型环境变量，会优先使用环境变量中的配置。</p>
+          <div class="form-actions">
+            <button type="submit" class="primary-button" id="save-button">保存配置</button>
+            <button type="button" class="secondary-button" id="test-button">测试连接</button>
+          </div>
+        </fieldset>
+        <div id="form-message" class="form-message" role="status" aria-live="polite" hidden></div>
+      </form>
+    </section>
+    <p class="settings-footnote">测试会发送一次简短模型请求。连接成功后，返回“日报记录”查看分析结果。</p>
+  </main>
+  <script src="/settings.js"></script>
+</body>
+</html>

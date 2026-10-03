@@ -34,3 +34,31 @@ scripts/read_shimo_cells.py
 scripts/run_daily.ps1
 scripts/verify_shimo_write.py
 src/inspect_project_children.py
+
+# Local dashboard runs, worktrees, reports, and developer environments.
+artifacts/
+work/
+.venv*/
+.pytest_cache/
+.idea/
+.env
+.env.*
+!config.example.env
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Do not stage untracked local drafts from shared source directories by accident.
+/docs/*
+/scripts/*
+!/scripts/serve_dashboard.py
+!/scripts/open_dashboard.ps1
+/tests/*
+!/tests/test_dashboard_report_ui.py
+
+# Root-level local launch notes and command files are not publishable by default.
+/*.cmd
+/*.md
+!/README.md
+!/DASHBOARD_README.md

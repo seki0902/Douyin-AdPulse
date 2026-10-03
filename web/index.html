@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>抖音投放诊断 · Shadow 查看器</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <header class="brand">
+      <h1>投放诊断</h1>
+      <p class="sub">本地诊断工作台</p>
+    </header>
+    <nav class="workspace-nav" aria-label="工作台">
+      <a href="/" aria-current="page">日报记录</a>
+      <a href="/settings">模型设置</a>
+    </nav>
+    <div class="run-list-heading">
+      <span>历史运行</span>
+      <span id="run-count" class="run-count"></span>
+    </div>
+    <div id="run-list" class="run-list" aria-label="历史运行"></div>
+  </aside>
+  <main id="main">
+    <div id="placeholder" class="placeholder">
+      <div class="placeholder-mark" aria-hidden="true"></div>
+      <strong>正在读取日报</strong>
+      <span>稍候片刻，诊断结果马上呈现。</span>
+    </div>
+    <div id="content" hidden>
+      <header id="meta"></header>
+      <div class="dashboard-shell">
+        <section id="metrics" class="metrics-grid" aria-label="运行概览"></section>
+        <section id="coverage" class="coverage-panel" aria-label="Agent 覆盖"></section>
+        <section id="issues" aria-label="需要关注的问题"></section>
+        <nav id="section-nav" class="section-nav" aria-label="日报章节"></nav>
+        <div id="report" class="report-grid"></div>
+      </div>
+    </div>
+  </main>
+  <script src="dashboard.js"></script>
+</body>
+</html>
