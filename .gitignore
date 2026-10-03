@@ -59,6 +59,7 @@ work/
 
 # Root-level local launch notes and command files are not publishable by default.
 /*.cmd
+!/open_dashboard.cmd
 /*.md
 !/README.md
 !/DASHBOARD_README.md
